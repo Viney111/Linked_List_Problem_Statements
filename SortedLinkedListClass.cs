@@ -59,35 +59,7 @@ namespace Linked_List_Problem_Statements
                 }
             }
         }
-        public void SortiList()
-        {
-            Node<T> current = head;
-            T index;
-
-            if (head == null)
-            {
-                return;
-            }
-            else
-            {
-                while (current != null)//For traversing through the list
-                {
-                    Node<T> temp = current;
-                    while (temp != null)//For traversing this list.
-                    {
-                        if (Comparer<T>.Default.Compare(current.data, temp.data) < 0)
-                        {
-                            index = current.data;
-                            current.data = temp.data;
-                            temp.data = index;
-
-                        }
-                        temp = temp.next;
-                    }
-                    current = current.next;
-                }
-            }
-        }
+        //For displaying the elements in list.
         public void DisplayLinkedList()
         {
             if (head == null)
