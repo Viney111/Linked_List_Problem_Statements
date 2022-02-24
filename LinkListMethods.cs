@@ -10,6 +10,19 @@ namespace Linked_List_Problem_Statements
     {
 
         public Node head;
+        //For deleting 1st Element in linked list.
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                head = head.next;
+            }
+        }
+
         //For inserting elements at last in LinkedList.
         public void InsertElementsInLinkedList(int value)
         {
