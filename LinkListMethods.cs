@@ -47,5 +47,18 @@ namespace Linked_List_Problem_Statements
                 Console.WriteLine($"{temp.data}");
             }
         }
+        public void AddingElementsToNode(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            else
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+        }
     }
 }
