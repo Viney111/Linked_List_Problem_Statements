@@ -10,6 +10,49 @@ namespace Linked_List_Problem_Statements
     {
 
         public Node head;
+        //Deleting a given node from the list
+        public void DeletingGivenNode(int deletingNode)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                Node temp = head;
+                Node prev = head;
+                while (temp != null)
+                {
+                    if (temp.data == deletingNode)
+                    {
+                        break;
+                    }
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = temp.next;
+            }
+        }
+        //For getting size of linked list !
+        public void SizeOfLinkedList()
+        {
+            int size = 0;
+            if (head == null)
+            {
+                Console.WriteLine("Linked listis empty.");
+            }
+            else
+            {
+                Node temp = head;
+                while(temp != null)
+                {
+                    size++;
+                    temp = temp.next;
+                }
+                Console.WriteLine("The size of the linked list is " + size);
+            }
+        }
+
         //Inserting Node after a given node.
         public void InsertNodeAfterDefinedNode(int data, int definedNode)
         {

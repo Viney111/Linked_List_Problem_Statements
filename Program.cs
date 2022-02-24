@@ -13,9 +13,18 @@ namespace Linked_List_Problem_Statements
             linkListMethods.InsertElementsInLinkedList(56);
             linkListMethods.InsertElementsInLinkedList(30);
             linkListMethods.InsertElementsInLinkedList(70);
+
             //Insert Node after a defined Node !
             linkListMethods.InsertNodeAfterDefinedNode(40,30);
-            //Verifying if UC Purpose id filled or not !
+
+            //Delete Node from Linkedlist.
+            linkListMethods.DeletingGivenNode(40);
+
+            //For getting the size of linked list
+            linkListMethods.SizeOfLinkedList();
+
+
+            //Verifying if UC Purpose is filled or not !
             linkListMethods.DisplayLinkedList();
         }
     }
