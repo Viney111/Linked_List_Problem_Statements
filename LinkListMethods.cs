@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Linked_List_Problem_Statements
 {
-    internal class LinkListMethods
+    internal class LinkListMethods<T>
     {
 
-        public Node head;
+        public Node<T> head;
         //Deleting a given node from the list
-        public void DeletingGivenNode(int deletingNode)
+        public void DeletingGivenNode(T deletingNode)
         {
             if (head == null)
             {
@@ -19,11 +19,11 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
-                Node prev = head;
+                Node<T> temp = head;
+                Node<T> prev = head;
                 while (temp != null)
                 {
-                    if (temp.data == deletingNode)
+                    if (temp.data.Equals(deletingNode))
                     {
                         break;
                     }
@@ -43,8 +43,8 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
-                while(temp != null)
+                Node<T> temp = head;
+                while (temp != null)
                 {
                     size++;
                     temp = temp.next;
@@ -54,20 +54,20 @@ namespace Linked_List_Problem_Statements
         }
 
         //Inserting Node after a given node.
-        public void InsertNodeAfterDefinedNode(int data, int definedNode)
+        public void InsertNodeAfterDefinedNode(T data, T definedNode)
         {
-            Node newNode = new Node(data);
+            Node<T> newNode = new Node<T>(data);
             if (head == null)
             {
                 Console.WriteLine("Empty linked list");
             }
             else
             {
-                Node temp = head;
-                Node prev = head;
+                Node<T> temp = head;
+                Node<T> prev = head;
                 while (temp != null)
                 {
-                    if (temp.data == definedNode)
+                    if (temp.data.Equals(definedNode))
                     {
                         newNode.next = temp.next;
                         break;
@@ -78,7 +78,7 @@ namespace Linked_List_Problem_Statements
             }
         }
         //Searching the Node & Finding its position.
-        public void SearchingNode(int data)
+        public void SearchingNode(T data)
         {
             if (head == null)
             {
@@ -86,22 +86,22 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
                 int positionOfSearchedNode = 0;
                 while (temp != null)
                 {
                     positionOfSearchedNode++;
-                    if (temp.data == data)
+                    if (temp.data.Equals(data))
                     {
                         Console.WriteLine($"Your {data} node is found at {positionOfSearchedNode} position.");
                         break;
                     }
                     temp = temp.next;
                 }
-                if(temp == null)
-                    {
-                        Console.WriteLine($"Specified {data} node is not present in the linked list.");
-                    }
+                if (temp == null)
+                {
+                    Console.WriteLine($"Specified {data} node is not present in the linked list.");
+                }
             }
 
         }
@@ -114,9 +114,9 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
-                Node prev = head;
-                while(temp.next != null)
+                Node<T> temp = head;
+                Node<T> prev = head;
+                while (temp.next != null)
                 {
                     prev = temp;
                     temp = temp.next;
@@ -138,9 +138,9 @@ namespace Linked_List_Problem_Statements
         }
 
         //For inserting elements at last in LinkedList.
-        public void InsertElementsInLinkedList(int value)
+        public void InsertElementsInLinkedList(T value)
         {
-            Node newNode = new Node(value);
+            Node<T> newNode = new Node<T>(value);
             if (head == null)
             {
                 head = newNode;
@@ -148,10 +148,10 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
                 while (temp.next != null)
                 {
-                    temp = temp.next;    
+                    temp = temp.next;
                 }
                 temp.next = newNode;
                 Console.WriteLine($"{newNode.data} is being added.");
@@ -166,20 +166,20 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                Node temp = head;
-                while(temp.next != null)
+                Node<T> temp = head;
+                while (temp.next != null)
                 {
                     Console.WriteLine($"{temp.data}");
-                    temp =temp.next;
+                    temp = temp.next;
                 }
                 Console.WriteLine($"{temp.data}");
             }
         }
         //Adding between two nodes.Works for only three elements in linked list.
-        public void AddingElementBetweenTwoNodes(int data)
+        public void AddingElementBetweenTwoNodes(T data)
         {
-            Node newNode = new Node(data);
-            Node temp = head;   
+            Node<T> newNode = new Node<T>(data);
+            Node<T> temp = head;
             temp = temp.next;
             newNode.next = temp;
             head.next = newNode;

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Linked_List_Problem_Statements
 {
-    internal class Node
+    internal class Node <T>
     {
-        public int data;
-        public Node next;
+        public T data;
+        public Node<T> next;
 
-        public Node(int data)
+        public Node(T data)
         {
             this.data = data;
         }
