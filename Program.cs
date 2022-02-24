@@ -11,9 +11,10 @@ namespace Linked_List_Problem_Statements
         {
             LinkListMethods linkListMethods = new LinkListMethods();
             linkListMethods.InsertElementsInLinkedList(56);
-            linkListMethods.InsertElementsInLinkedList(30);
             linkListMethods.InsertElementsInLinkedList(70);
-            //Verifying if elements are added or not.
+            //Adding Node of 30 between 56 & 70.
+            linkListMethods.AddingElementBetweenTwoNodes(30);
+            //Verifying if UC Purpose id filled or not !
             linkListMethods.DisplayLinkedList();
         }
     }

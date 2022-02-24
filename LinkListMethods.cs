@@ -30,6 +30,7 @@ namespace Linked_List_Problem_Statements
                 Console.WriteLine($"{newNode.data} is being added.");
             }
         }
+        //For displaying elements of linked list on Console.
         public void DisplayLinkedList()
         {
             if (head == null)
@@ -47,18 +48,14 @@ namespace Linked_List_Problem_Statements
                 Console.WriteLine($"{temp.data}");
             }
         }
-        public void AddingElementsToNode(int data)
+        //Adding between two nodes.Works for only three elements in linked list.
+        public void AddingElementBetweenTwoNodes(int data)
         {
             Node newNode = new Node(data);
-            if (head == null)
-            {
-                Console.WriteLine("Linked list is empty");
-            }
-            else
-            {
-                newNode.next = head;
-                head = newNode;
-            }
+            Node temp = head;   
+            temp = temp.next;
+            newNode.next = temp;
+            head.next = newNode;
         }
     }
 }
