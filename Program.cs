@@ -10,7 +10,9 @@ namespace Linked_List_Problem_Statements
         static void Main(string[] args)
         {
             LinkListMethods linkListMethods = new LinkListMethods();
-            linkListMethods.InsertElementsInLinkedList(12);
+            linkListMethods.InsertElementsInLinkedList(56);
+            linkListMethods.InsertElementsInLinkedList(30);
+            linkListMethods.InsertElementsInLinkedList(70);
         }
     }
 }
