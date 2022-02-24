@@ -10,6 +10,25 @@ namespace Linked_List_Problem_Statements
     {
 
         public Node head;
+        //For removing last node in linkedlist.
+        public void PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty linked list");
+            }
+            else
+            {
+                Node temp = head;
+                Node prev = head;
+                while(temp.next != null)
+                {
+                    prev = temp;
+                    temp = temp.next;
+                }
+                prev.next = null;
+            }
+        }
         //For deleting 1st Element in linked list.
         public void Pop()
         {
