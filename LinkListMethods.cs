@@ -30,5 +30,22 @@ namespace Linked_List_Problem_Statements
                 Console.WriteLine($"{newNode.data} is being added.");
             }
         }
+        public void DisplayLinkedList()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            else
+            {
+                Node temp = head;
+                while(temp.next != null)
+                {
+                    Console.WriteLine($"{temp.data}");
+                    temp =temp.next;
+                }
+                Console.WriteLine($"{temp.data}");
+            }
+        }
     }
 }

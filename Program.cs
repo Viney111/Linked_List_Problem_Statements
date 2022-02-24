@@ -13,6 +13,7 @@ namespace Linked_List_Problem_Statements
             linkListMethods.InsertElementsInLinkedList(56);
             linkListMethods.InsertElementsInLinkedList(30);
             linkListMethods.InsertElementsInLinkedList(70);
+            linkListMethods.DisplayLinkedList();
         }
     }
 }
