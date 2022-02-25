@@ -29,7 +29,7 @@ namespace Linked_List_Problem_Statements
                 Console.WriteLine($"{newNode.data} is being added.");
             }
         }
-        //For Sorting a list in array in ascending order.
+        //For Sorting a list in ascending order.
         public void SortList()
         {
             Node<T> current = head;
@@ -41,10 +41,10 @@ namespace Linked_List_Problem_Statements
             }
             else
             {
-                while(current != null)//For traversing through the list
+                while(current != null)
                 {
                     Node<T> temp = current;
-                    while (temp != null)//For traversing this list.
+                    while (temp != null)
                     {
                         if(Comparer<T>.Default.Compare(current.data,temp.data)> 0)
                         {
